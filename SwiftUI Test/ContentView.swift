@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        VStack (alignment: .leading){
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
@@ -34,7 +34,7 @@ struct ContentView: View {
                 .padding()
                 .background(Color.yellow)
                 
-            HStack{
+            HStack(spacing: 0){
                 Image("SwiftUI")
                 Image("SwiftUI").frame(width: 50, height: 50)
                 Image("SwiftUI").frame(width: 200, height: 200)
@@ -47,6 +47,7 @@ struct ContentView: View {
                 Image("SwiftUI")
                     .resizable().frame(width: 200, height: 200)
             }
+            .border(Color.cyan)
 
             ZStack{
                 Rectangle()
@@ -58,9 +59,12 @@ struct ContentView: View {
                     .frame(width: 150, height: 150)
                     .offset(x: 40, y: 40)
             }
+            .padding()
+            .border(Color.cyan)
                 
         }
         .padding()
+
         
         
     }

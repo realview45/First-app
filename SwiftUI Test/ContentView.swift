@@ -48,6 +48,16 @@ struct ContentView: View {
                     .resizable().frame(width: 200, height: 200)
             }
 
+            ZStack{
+                Rectangle()
+                    .fill(Color.green)
+                    .frame(width: 150, height: 150)
+        
+                Rectangle()
+                    .fill(Color.yellow)
+                    .frame(width: 150, height: 150)
+                    .offset(x: 40, y: 40)
+            }
                 
         }
         .padding()

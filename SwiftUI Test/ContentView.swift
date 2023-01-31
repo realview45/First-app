@@ -34,9 +34,25 @@ struct ContentView: View {
                 .padding()
                 .background(Color.yellow)
                 
+            HStack{
+                Image("SwiftUI")
+                Image("SwiftUI").frame(width: 50, height: 50)
+                Image("SwiftUI").frame(width: 200, height: 200)
+            }
+
+            HStack{
+                Image("SwiftUI")
+                Image("SwiftUI")
+                    .resizable().frame(width: 50, height: 50)
+                Image("SwiftUI")
+                    .resizable().frame(width: 200, height: 200)
+            }
+
                 
         }
         .padding()
+        
+        
     }
 }
 

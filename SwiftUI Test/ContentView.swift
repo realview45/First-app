@@ -18,6 +18,22 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .fontWeight(/*@START_MENU_TOKEN@*/.heavy/*@END_MENU_TOKEN@*/)
+            
+            Text("SwiftUI")
+                .padding()
+                .font(.title)
+                .bold()//오류나야하는데?
+            
+            Text("🐶🐱🐭")
+                .font(.largeTitle)
+                .background(Color.yellow)
+                .padding()
+            
+            Text("🐶🐱🐭")
+                .font(.largeTitle)
+                .padding()
+                .background(Color.yellow)
+                
                 
         }
         .padding()

@@ -10,12 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
+        //ZStack에서 Spacer이용하면 다 가려짐
+        ZStack{
+            //따라서
+            Color.clear//or Rectangle 부모뷰만큼 크기가 커짐
+            Text("Spacer").font(.title).background(Color.yellow)
+        }.background(Color.blue)//배경다 파란색으로 변함
+        
+        /*
         HStack{
             Text("Spacer MinLength").font(.title).foregroundColor(.white)
             Spacer(minLength: 90)//Spacer높이
             Text("Spacer").font(.title).background(Color.yellow)
         }.background(Color.blue)
-        
+        */
         
         /*Spacer
         HStack{

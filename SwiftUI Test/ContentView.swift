@@ -9,7 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-    
+        let leadingItem = Button(action: {print("Leading item tapped")}){
+            Image("SwiftUI").imageScale(.large)
+        }
+        let trailingItem = Button(action: {print("Trailing item tapped")}){
+            Image("SwiftUI").imageScale(.large)
+        }
+        return NavigationView{
+            Image("SwiftUI")
+                .navigationBarItems(leading: leadingItem, trailing: trailingItem)
+                .navigationBarTitle("내비게이션 바 아이템")
+        }
+       
+        /*
         VStack{
             Spacer()
             //background modifier 사용하기 아래 그려짐
@@ -36,7 +48,7 @@ struct ContentView: View {
                 .border(Color.red)
             Spacer()
         }.padding()
-        
+        */
         /*
         //ZStack에서 Spacer이용하면 다 가려짐
         ZStack{

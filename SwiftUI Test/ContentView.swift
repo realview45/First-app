@@ -9,6 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
+        HStack{
+            Text("Spacer MinLength").font(.title).foregroundColor(.white)
+            Spacer(minLength: 90)//Spacer높이
+            Text("Spacer").font(.title).background(Color.yellow)
+        }.background(Color.blue)
+        
+        
+        /*Spacer
+        HStack{
+            Spacer().frame(width: 90)
+            //Spacer().background(Color.blue)//색표현해봤자안됨
+            Text("Spacer").font(.title).background(Color.yellow)
+        }.background(Color.blue)//여기서 Spacer색표현
+        //Spacer().background(Color.blue)이거왜안되지 이제안되나
+        */
+        
+        
+        /*
         VStack (alignment: .leading){
             Image(systemName: "globe")
                 .imageScale(.large)
@@ -64,10 +83,11 @@ struct ContentView: View {
                 
         }
         .padding()
-
-        
+         */
+       
         
     }
+         
 }
 
 struct ContentView_Previews: PreviewProvider {

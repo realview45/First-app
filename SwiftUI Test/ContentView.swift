@@ -9,13 +9,42 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+    
+        VStack{
+            Spacer()
+            //background modifier 사용하기 아래 그려짐
+            Rectangle().fill(Color.green).frame(width:10, height: 10)
+                .background(Rectangle().fill(Color.yellow).frame(width:80,height:80))
+            
+            Spacer()
+            
+            //overlay modifier 사용하기 위에 그려짐
+             Rectangle().fill(Color.green).frame(width:150, height: 150)
+             .overlay(Rectangle().fill(Color.yellow).frame(width:80,height:80))
+            
+            Spacer()
+            
+            Circle()
+                .fill(Color.yellow.opacity(0.8))
+                .frame(width: 300,height:300)
+                .overlay(Text("JoyStick").font(.largeTitle))
+                .overlay(Image(systemName: "arrow.up").font(.title).padding(),alignment: .top)
+                .background(Image(systemName: "arrow.down").font(.title).padding(),alignment: .bottom)
+                .overlay(Image(systemName: "arrow.left").font(.title).padding(),alignment: .leading)
+                .background(Image(systemName: "arrow.right").font(.title).padding(),alignment: .trailing)
+                .overlay(Image(systemName: "arrow.up.right.circle.fill").font(.title).padding(),alignment: .topTrailing)
+                .border(Color.red)
+            Spacer()
+        }.padding()
         
+        /*
         //ZStack에서 Spacer이용하면 다 가려짐
         ZStack{
             //따라서
             Color.clear//or Rectangle 부모뷰만큼 크기가 커짐
             Text("Spacer").font(.title).background(Color.yellow)
         }.background(Color.blue)//배경다 파란색으로 변함
+        */
         
         /*
         HStack{
